@@ -24,4 +24,23 @@ func main() {
 	fmt.Println(fruits)
 	fmt.Println(fruits[1])
 
+	var aa [5][5]int
+	fmt.Println(aa)
+
+	count := 1
+	for i := 0; i < 5; i++ {
+		for j := 0; j < 5; j++ {
+
+			aa[i][j] = count
+			count = count + 1
+		}
+	}
+
+	fmt.Println(aa)
+
+	//SLICES
+	fruitSlice := []string{"Apple", "Orange", "Grape", "Cherry"}
+
+	fmt.Println(len(fruitSlice))
+	fmt.Println(fruitSlice[1:3])
 }
