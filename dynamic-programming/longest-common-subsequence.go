@@ -13,6 +13,23 @@ func max(a, b uint8) uint8 {
 	return b
 }
 
+func lcsOpti(A string, B string) uint8 {
+
+	dp := make([][]uint8, 2)
+	for i := range dp {
+		dp[i] = make([]uint8, len(B)+1)
+	}
+
+	var idx bool
+	for i := range dp {
+
+		idx = (i && bool(1))
+		for j := range dp[i] {
+
+		}
+	}
+}
+
 func lcs(A string, B string) uint8 {
 
 	dp := make([][]uint8, len(A)+1)
@@ -47,5 +64,7 @@ func main() {
 	fmt.Scanf("%s", &B)
 
 	fmt.Printf("Longest common substring of %s and %s = %d\n", A, B, lcs(A, B))
+
+	fmt.Printf("Longest common substring of %s and %s = %d\n", A, B, lcsOpti(A, B))
 
 }
