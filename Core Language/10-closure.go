@@ -24,6 +24,14 @@ func int_seq() func() int {
 	}
 }
 
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
 func main() {
 
 	//1. Regular function
@@ -43,4 +51,12 @@ func main() {
 	fmt.Println(next_int())
 	fmt.Println(next_int())
 	fmt.Println(next_int())
+
+	fmt.Println()
+
+	sum := adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(sum(i))
+	}
+
 }
